@@ -4,7 +4,8 @@
 
 > Карасев Илья
 
-![image](https://github.com/user-attachments/assets/aa65c218-5536-4948-b53e-2bfbf37b9073)
+![image](https://github.com/user-attachments/assets/e011336d-a938-4c69-a519-fee93f56b763)
+
 
 
 
