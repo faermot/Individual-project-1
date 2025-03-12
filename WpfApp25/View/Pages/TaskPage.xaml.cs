@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp25.Core;
+using WpfApp25.View.Pages.PageTask;
 
 namespace WpfApp25.View.Pages
 {
@@ -27,27 +29,38 @@ namespace WpfApp25.View.Pages
 
         private void BtnTask1_Click(object sender, RoutedEventArgs e)
         {
-
+            ConnectionCore.CoreFrame?.Navigate(new Task1Page());
         }
 
         private void BtnTask2_Click(object sender, RoutedEventArgs e)
         {
-
+            ConnectionCore.CoreFrame?.Navigate(new Task2Page());
         }
 
         private void BtnTask3_Click(object sender, RoutedEventArgs e)
         {
-
+            ConnectionCore.CoreFrame?.Navigate(new Task3Page());
         }
 
         private void BtnTask4_Click(object sender, RoutedEventArgs e)
         {
-
+            ConnectionCore.CoreFrame?.Navigate(new Task4Page());
         }
 
         private void BtnTask5_Click(object sender, RoutedEventArgs e)
         {
+            ConnectionCore.CoreFrame?.Navigate(new Task5Page());
+        }
 
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите выйти?",
+                "Системное сообщение",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                ConnectionCore.CoreFrame?.Navigate(new MainPage());
+            }
         }
     }
 }

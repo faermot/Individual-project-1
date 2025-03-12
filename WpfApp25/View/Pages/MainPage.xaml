@@ -9,59 +9,74 @@
       d:DesignHeight="700" 
       d:DesignWidth="800">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
 
-        <Image Grid.RowSpan="3"
-               Source="/Images/main_bg.jpg"
-               Stretch="UniformToFill"/>
+    <Border BorderBrush="{StaticResource PrimaryHueDarkBrush}" BorderThickness="3">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
 
-        <Border Grid.Row="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Background="#0B7373"
-                Width="500"
-                Height="100"
-                CornerRadius="15"
-                Effect="{StaticResource MaterialDesignElevationShadow1}">
-            <StackPanel HorizontalAlignment="Center"
+            <Image Grid.RowSpan="3"
+                   Source="/Images/main_bg.jpg"
+                   Stretch="UniformToFill" />
+
+            <Border Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="{StaticResource PrimaryHueDarkBrush}"
+                    Width="500"
+                    Height="100"
+                    CornerRadius="15"
+                    Effect="{StaticResource MaterialDesignElevationShadow1}">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Индивидуальный проект"
+                               FontWeight="SemiBold"
+                               Foreground="White"
+                               FontSize="35"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="{StaticResource PrimaryHueDarkBrush}"
+                    Width="700"
+                    Height="100"
+                    CornerRadius="15"
+                    Effect="{StaticResource MaterialDesignElevationShadow1}">
+                <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="по УП 01.01: "
+                               FontWeight="SemiBold"
+                               Foreground="White"
+                               FontSize="35" />
+                </StackPanel>
+            </Border>
+
+            <StackPanel Grid.Row="2"
+                        HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                <TextBlock Text="по УП 01.01: "
-                           FontWeight="SemiBold"
-                           Foreground="White"
-                           FontSize="35"/>
-
-                <TextBlock Text="Основы программирования"
-                           Margin="0 5 0 0"
-                           FontWeight="SemiBold"
-                           Foreground="White"
-                           FontSize="35"/>
-
-                <StackPanel Grid.Row="2"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
-                    <Button Background="#0B7373"
-            Foreground="White"
-            x:Name="BtnTask"
-            Click="BtnTask_Click"
-            Style="{StaticResource MaterialDesignRaisedButton}"
-            materialDesign:ButtonProgressAssist.Value="-1"
-            materialDesign:ButtonProgressAssist.IndicatorForeground="White"
-            materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-            materialDesign:ButtonProgressAssist.IsIndeterminate="True"
-            Height="60"/>
+                <Button Background="{StaticResource PrimaryHueMidBrush}"
+                        Foreground="White"
+                        x:Name="BtnTask"
+                        Click="BtnTask_Click"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        materialDesign:ButtonProgressAssist.Value="-1"
+                        materialDesign:ButtonProgressAssist.IndicatorForeground="White"
+                        materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                        Height="60">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Eye"
-                                 Margin="0 0 3 0"
-                                 Width="50"
-                                 Height="40"/>
+                                                 Margin="0 0 3 0"
+                                                 Width="50"
+                                                 Height="40"/>
                         <TextBlock Text="Перейти к заданиям"
-                   FontSize="25"
-                   VerticalAlignment="Center">
+                                   FontSize="25"
+                                   VerticalAlignment="Center">
                             <TextBlock.Style>
                                 <Style TargetType="TextBlock">
                                     <Style.Triggers>
@@ -73,8 +88,8 @@
                             </TextBlock.Style>
                         </TextBlock>
                     </StackPanel>
-                </StackPanel>
+                </Button>
             </StackPanel>
-        </Border>
-    </Grid>
+        </Grid>
+    </Border>
 </Page>
