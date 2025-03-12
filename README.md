@@ -1,6 +1,6 @@
 # Индивидуальный проект №1
 
-<img src="https://github.com/user-attachments/assets/935e84bd-b952-4747-a70d-223b74a3a17e" width="145" />
+<img src="https://github.com/user-attachments/assets/07d59cf5-e241-4206-8508-c037fd8049f4" width="135" />
 
 > Карасев Илья
 
